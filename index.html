@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Privacidad - Peakest</title>
-  <meta name="description" content="Política de Privacidad y tratamiento de datos de la aplicación móvil Peakest.">
+  <title>Política de Privacidad y Términos - Peakest</title>
+  <meta name="description" content="Política de Privacidad, condiciones de uso y tratamiento de datos de la aplicación móvil Peakest.">
   <style>
     :root {
       --bg-color: #f8fafc;
@@ -15,6 +15,9 @@
       --primary: #15803d;
       --primary-light: #dcfce7;
       --accent: #0284c7;
+      --warning-bg: #fef3c7;
+      --warning-border: #f59e0b;
+      --warning-text: #92400e;
       --max-width: 820px;
     }
 
@@ -28,6 +31,9 @@
         --primary: #22c55e;
         --primary-light: #064e3b;
         --accent: #38bdf8;
+        --warning-bg: #451a03;
+        --warning-border: #d97706;
+        --warning-text: #fde68a;
       }
     }
 
@@ -91,12 +97,9 @@
     h2 {
       font-size: 1.35rem;
       font-weight: 700;
-      margin-top: 2rem;
+      margin-top: 2.25rem;
       margin-bottom: 0.75rem;
       color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
     h3 {
@@ -146,13 +149,32 @@
       text-decoration: underline;
     }
 
-    .contact-box {
+    .info-box {
       background: var(--bg-color);
       border: 1px solid var(--border-color);
       border-radius: 10px;
       padding: 1.25rem;
       margin-top: 1rem;
       margin-bottom: 1.5rem;
+    }
+
+    .alert-box {
+      background: var(--warning-bg);
+      border-left: 4px solid var(--warning-border);
+      color: var(--warning-text);
+      padding: 1.25rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .alert-box p {
+      color: inherit;
+      margin-bottom: 0.5rem;
+    }
+
+    .alert-box p:last-child {
+      margin-bottom: 0;
     }
 
     footer {
@@ -182,65 +204,67 @@
 
   <main class="container">
     <header class="header">
-      <span class="badge">Legal</span>
-      <h1>Política de Privacidad de Peakest</h1>
+      <span class="badge">Legal y Privacidad</span>
+      <h1>Política de Privacidad y Condiciones de Peakest</h1>
       <p class="date">Última actualización: 21 de septiembre de 2026</p>
     </header>
 
-    <p>En <strong>Peakest</strong>, valoramos y respetamos la privacidad de nuestros usuarios. Esta Política de Privacidad detalla de forma clara cómo recopilamos, gestionamos, protegemos y tratamos su información al hacer uso de nuestra aplicación móvil, en estricto cumplimiento con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea y las directrices de publicación de aplicaciones móviles.</p>
+    <p>En <strong>Peakest</strong>, valoramos y respetamos la privacidad y seguridad de nuestros usuarios. Este documento describe de forma clara y transparente cómo recopilamos, gestionamos y protegemos su información al utilizar nuestra aplicación móvil, en cumplimiento con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea y las directrices para aplicaciones móviles.</p>
 
     <h2>1. Responsable del Tratamiento</h2>
-    <div class="contact-box">
+    <div class="info-box">
       <ul>
-        <li><strong>Titular / Proyecto:</strong> Uranium Forest (Desarrollador independiente)</li>
+        <li><strong>Titular del desarrollo:</strong> Uranium Forest (Desarrollador independiente)</li>
         <li><strong>Aplicación:</strong> Peakest</li>
-        <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a></li>
+        <li><strong>Canal de contacto y privacidad:</strong> <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a></li>
       </ul>
-      <p style="margin-bottom: 0;">Para cualquier consulta, reporte o ejercicio de sus derechos de privacidad, puede contactar directamente al correo indicado.</p>
+      <p style="margin-bottom: 0;">Para cualquier duda, solicitud de eliminación de cuenta o reporte de contenido, puede contactarnos directamente al correo indicado.</p>
     </div>
 
     <h2>2. Información que Recopilamos y Finalidad</h2>
 
     <h3>a. Cuenta de usuario y autenticación (Google Sign-In)</h3>
-    <p>Utilizamos el inicio de sesión federado de Google. Al registrarse, recopilamos únicamente el identificador único de cuenta provisto por Google (Google ID) y el correo electrónico asociado, necesarios para autenticar de forma segura su sesión en nuestros servidores.</p>
-    <p>Cada usuario tiene la potestad de elegir un <strong>nombre de usuario público</strong> dentro de la aplicación, el cual se exhibe en los rankings comunitarios de cumbres y junto a los comentarios que decida publicar.</p>
+    <p>Utilizamos el sistema de inicio de sesión seguro de Google. Al registrarse, recopilamos únicamente el identificador único de cuenta otorgado por Google (Google ID) y el correo electrónico vinculado, estrictamente necesarios para autenticar su acceso.</p>
+    <p>Cada usuario elige voluntariamente un <strong>nombre de usuario público</strong> que se exhibirá en los rankings competitivos, en el historial público de cumbres conquistadas y junto a los comentarios que decida publicar.</p>
 
-    <h3>b. Datos de geolocalización (GPS) y picos</h3>
-    <p>Peakest procesa datos de geolocalización bajo un principio estricto de minimización:</p>
+    <h3>b. Ubicación y validación de cumbres (GPS)</h3>
+    <p>Peakest opera bajo un principio riguroso de minimización de datos de geolocalización:</p>
     <ul>
-      <li><strong>Procesamiento local:</strong> El cálculo de proximidad a las montañas se realiza directamente en su dispositivo. Su ruta de trayecto o coordenadas constantes <strong>nunca se transmiten ni quedan registradas en nuestros servidores</strong>.</li>
-      <li><strong>Verificación de cumbre:</strong> Únicamente al verificar que se encuentra en el radio de la cima de un pico, se envía a nuestro backend la confirmación de la cumbre alcanzada junto con la fecha y hora, sumando los puntos correspondientes a su perfil. Esta detección opera con la aplicación abierta o minimizada durante su actividad, pero cesa por completo si la app se cierra.</li>
-      <li><strong>Consultas externas sobre montañas:</strong> Las coordenadas consultadas para visualizar rutas, condiciones meteorológicas o datos orográficos corresponden a ubicaciones públicas de cumbres y no representan ni transmiten su ubicación personal.</li>
+      <li><strong>Procesamiento en local:</strong> La comprobación constante de proximidad a las montañas se realiza directamente en el propio dispositivo. <strong>Su recorrido o coordenadas en tiempo real no se transmiten ni almacenan de forma continua en nuestros servidores.</strong></li>
+      <li><strong>Registro de cumbre:</strong> Solo cuando la aplicación verifica que usted se encuentra físicamente en el radio de la cima de un pico, se transmite a nuestro servidor la confirmación de la cumbre alcanzada junto con la marca de tiempo (timestamp) para acreditar los puntos a su cuenta. Dicha detección opera con la aplicación abierta o minimizada durante la ruta, pero cesa por completo si la app se cierra.</li>
+      <li><strong>Consultas informativas de montañas:</strong> Las coordenadas geográficas utilizadas al buscar picos, ver mapas o consultar detalles orográficos corresponden a ubicaciones públicas de montañas y <strong>no representan su ubicación personal</strong>.</li>
     </ul>
 
-    <h3>c. Contenido generado por el usuario y moderación</h3>
-    <p>Los comentarios que publica en las páginas de las cumbres son públicos y quedan asociados a su nombre de usuario. Si decide reportar un comentario de otro usuario, recibimos la alerta junto con el identificador del contenido para llevar a cabo la revisión y moderación correspondiente.</p>
+    <h3>c. Comentarios y contenido de la comunidad</h3>
+    <p>Los comentarios publicados en los picos son públicos y quedan vinculados a su nombre de usuario. Ponemos a disposición de la comunidad herramientas para <strong>reportar</strong> contenido inadecuado y <strong>bloquear</strong> a otros usuarios.</p>
 
-    <h2>3. Base Legal del Tratamiento</h2>
-    <p>El tratamiento de sus datos se sustenta en:</p>
+    <h2>3. Advertencia de Seguridad en Montaña y Juego Limpio</h2>
+    <div class="alert-box">
+      <p><strong>Uso recreativo y riesgo en montaña:</strong> Peakest y su sistema de puntuaciones tienen un fin estrictamente lúdico e informativo. El montañismo, senderismo y la ascensión a cumbres conllevan riesgos inherentes de lesiones graves o muerte. Es responsabilidad exclusiva del usuario evaluar las condiciones meteorológicas, el terreno, su condición física y respetar las normas de seguridad aplicables. Las tablas de clasificación jamás deben interpretarse como una incitación a conductas temerarias o accesos indebidos.</p>
+      <p><strong>Anti-trampas:</strong> Nos reservamos el derecho de invalidar registros de cumbres, anular puntuaciones del ranking o suspender cuentas cuando se detecte uso de herramientas de falsificación GPS (GPS spoofing), bots o manipulaciones fraudulentas.</p>
+    </div>
+
+    <h2>4. Enlaces y Servicios de Terceros</h2>
+    <p>Para enriquecer la experiencia, la aplicación puede contener botones o accesos directos que conectan con servicios externos:</p>
     <ul>
-      <li><strong>Ejecución del servicio:</strong> Para mantener sus estadísticas, puntuaciones en rankings y registro de ascensiones.</li>
-      <li><strong>Consentimiento:</strong> Otorgado voluntariamente al iniciar sesión con Google y al autorizar los permisos de ubicación en el dispositivo.</li>
-      <li><strong>Interés legítimo:</strong> Prevención de trampas o abusos en los rankings competitivos y moderación de contenido comunitario.</li>
+      <li><strong>Previsiones meteorológicas y guías de rutas:</strong> Enlaces a proveedores externos que ofrecen información de tiempo o itinerarios.</li>
+      <li><strong>Consultas externas de IA / Información:</strong> Funcionalidades que consultan descripciones de picos mediante proveedores de inteligencia artificial externos (como APIs de lenguaje).</li>
+    </ul>
+    <p><strong>Descargo de responsabilidad de terceros:</strong> No tenemos control sobre el contenido, la precisión, los cambios, las políticas de cookies o la privacidad de estos sitios web y servicios externos. El acceso a dichos recursos ajenos a Peakest se realiza bajo la propia responsabilidad del usuario.</p>
+
+    <h2>5. Proveedores de Infraestructura</h2>
+    <p>No vendemos sus datos personales ni los compartimos con fines publicitarios. Recurrimos únicamente a proveedores esenciales para el soporte técnico:</p>
+    <ul>
+      <li><strong>Amazon Web Services (AWS):</strong> Alojamiento de bases de datos, APIs serverless (AWS Lambda) y recepción de alertas y reportes mediante Amazon SNS/SES.</li>
+      <li><strong>Google Identity Services:</strong> Para la verificación de identidad del usuario.</li>
     </ul>
 
-    <h2>4. Proveedores de Infraestructura y Terceros</h2>
-    <p>No comercializamos ni transferimos sus datos personales a terceros con fines publicitarios. Recurrimos únicamente a servicios de infraestructura esenciales:</p>
-    <ul>
-      <li><strong>Amazon Web Services (AWS):</strong> Alojamiento seguro de bases de datos, APIs de backend sin servidor (AWS Lambda) y sistemas de notificación/alertas (Amazon SNS/SES).</li>
-      <li><strong>Google Identity Services:</strong> Para la autenticación segura del usuario.</li>
-      <li><strong>APIs orográficas y meteorológicas externas:</strong> Consultas técnicas de coordenadas de montañas sin vincular su identidad ni su ubicación en tiempo real.</li>
-    </ul>
+    <h2>6. Conservación de Datos y Derechos RGPD</h2>
+    <p>Sus datos de cuenta, puntuación y comentarios se conservarán mientras mantenga activo su perfil. Usted puede ejercer en todo momento sus derechos de acceso, rectificación, limitación o <strong>supresión total de su cuenta y datos personales</strong>.</p>
+    <p>Para ejercer sus derechos o solicitar el borrado de su cuenta, envíenos un correo a <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a>. Asimismo, puede revocar el permiso de acceso a la ubicación en cualquier momento desde los ajustes del sistema operativo de su teléfono móvil.</p>
 
-    <h2>5. Conservación de Datos</h2>
-    <p>Los registros de sus ascensiones, puntuación y comentarios se conservan mientras mantenga activa su cuenta en Peakest. Si decide eliminar su cuenta o solicitar su baja, sus datos identificativos y de acceso serán suprimidos permanentemente de nuestra base de datos activa.</p>
-
-    <h2>6. Sus Derechos (RGPD)</h2>
-    <p>De conformidad con la normativa europea, usted tiene derecho a acceder, rectificar, limitar, solicitar la portabilidad o exigir la eliminación total de sus datos personales. También puede revocar los permisos de ubicación en cualquier momento desde los ajustes de su dispositivo móvil.</p>
-    <p>Para ejercitar cualquiera de estos derechos, basta con enviar un correo a <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a> indicando su solicitud. Asimismo, tiene derecho a presentar una reclamación ante la autoridad de control pertinente (como la Agencia Española de Protección de Datos - AEPD).</p>
-
-    <h2>7. Modificaciones</h2>
-    <p>Podemos actualizar esta política para reflejar mejoras en la app o adecuaciones regulatorias. La fecha de la última revisión siempre estará visible en la cabecera de esta página.</p>
+    <h2>7. Actualizaciones de este Documento</h2>
+    <p>Podremos revisar y actualizar este texto para adaptarlo a nuevas versiones de la aplicación o requisitos legales. Las modificaciones serán efectivas desde el momento de su publicación en esta misma página web.</p>
 
     <footer>
       &copy; 2026 Uranium Forest. Todos los derechos reservados. Peakest.
