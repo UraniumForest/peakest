@@ -206,10 +206,10 @@
     <header class="header">
       <span class="badge">Legal y Privacidad</span>
       <h1>Política de Privacidad y Términos de Peakest</h1>
-      <p class="date">Última actualización: 22 de septiembre de 2026</p>
+      <p class="date">Última actualización: 22 de octubre de 2026</p>
     </header>
 
-    <p>En <strong>Peakest</strong>, valoramos y respetamos la privacidad y seguridad de nuestros usuarios. Este documento describe de forma clara y transparente cómo recopilamos, gestionamos y protegemos su información al utilizar nuestra aplicación móvil, en cumplimiento con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea, la Ley de Servicios Digitales (DSA) y las directrices de publicación en tiendas de aplicaciones.</p>
+    <p>En <strong>Peakest</strong>, valoramos y respetamos la privacidad y seguridad de nuestros usuarios. Este documento describe de forma clara y transparente cómo recopilamos, gestionamos y protegemos su información al utilizar nuestra aplicación móvil, en cumplimiento con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea, la Ley de Servicios Digitales (DSA) y las directrices de publicación de Google Play.</p>
 
     <h2>1. Responsable del Tratamiento</h2>
     <div class="info-box">
@@ -218,71 +218,79 @@
         <li><strong>Aplicación:</strong> Peakest</li>
         <li><strong>Canal de contacto, privacidad y soporte:</strong> <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a></li>
       </ul>
-      <p style="margin-bottom: 0;">Para cualquier duda, solicitud de eliminación de cuenta o notificación legal de contenido, puede contactarnos directamente al correo indicado.</p>
+      <p style="margin-bottom: 0;">Para cualquier duda, consulta sobre sus datos personales o notificación legal de contenido, puede ponerse en contacto directo con nosotros.</p>
     </div>
 
     <h2>2. Información que Recopilamos y Finalidad</h2>
 
-    <h3>a. Cuenta de usuario y autenticación (Google Sign-In)</h3>
-    <p>Utilizamos el sistema de inicio de sesión seguro de Google. Al registrarse, recopilamos únicamente el identificador único de cuenta otorgado por Google (Google ID) y el correo electrónico vinculado, estrictamente necesarios para autenticar su acceso.</p>
-    <p>Cada usuario elige voluntariamente un <strong>nombre de usuario público</strong> que se exhibirá en los rankings competitivos, en el historial público de cumbres conquistadas y junto a los comentarios que decida publicar.</p>
+    <h3>a. Cuenta de usuario y autenticación (Google Sign-In & AWS Cognito)</h3>
+    <p>Utilizamos el sistema de inicio de sesión seguro de Google vinculado a AWS Cognito. Al registrarse, recopilamos únicamente el identificador único otorgado por Google (Google ID) y el correo electrónico asociado, estrictamente necesarios para autenticar y proteger su sesión de usuario.</p>
+    <p>Cada usuario elige libremente un <strong>nombre de usuario público</strong> que se exhibirá en las clasificaciones y ligas del ranking, en la lista pública de conquistadores de cimas y junto a los comentarios o valoraciones que decida publicar.</p>
 
-    <h3>b. Ubicación y validación de cumbres (GPS)</h3>
-    <p>Peakest opera bajo un principio riguroso de minimización de datos de geolocalización:</p>
+    <h3>b. Ubicación, validación de cumbres y grabación de rutas (GPS)</h3>
+    <p>Peakest opera bajo un principio estricto de minimización de datos de geolocalización:</p>
     <ul>
-      <li><strong>Procesamiento en local:</strong> La comprobación constante de proximidad a las montañas se realiza directamente en el propio dispositivo. <strong>Su recorrido o coordenadas continuas en tiempo real no se transmiten ni almacenan en nuestros servidores.</strong></li>
-      <li><strong>Registro de cumbre:</strong> Solo cuando la aplicación verifica que usted se encuentra físicamente en el radio de la cima de un pico, se transmite a nuestro servidor la confirmación de la cumbre alcanzada junto con la marca de tiempo (timestamp) para acreditar los puntos a su cuenta. Dicha detección opera con la aplicación abierta o minimizada durante la ruta, pero cesa por completo si la app se cierra.</li>
-      <li><strong>Consultas informativas de montañas:</strong> Las coordenadas geográficas utilizadas al buscar picos, ver mapas o consultar detalles orográficos corresponden a ubicaciones públicas de montañas y <strong>no representan su ubicación personal</strong>.</li>
+      <li><strong>Procesamiento local de proximidad:</strong> La comprobación periódica de distancia a las cumbres y el trazado de rutas en el mapa se realizan en tiempo real en el propio dispositivo. <strong>Sus coordenadas continuas o itinerarios GPS en tiempo real no se transmiten ni se almacenan de forma permanente en nuestros servidores.</strong></li>
+      <li><strong>Registro de cumbre alcanzada:</strong> Únicamente cuando la aplicación verifica que se encuentra físicamente en el radio de una cima, se envía a la nube la confirmación de la cumbre conquistada junto con la fecha y hora (timestamp) para asignar los puntos de D+ a su cuenta y ranking. Dicha detección funciona con la app abierta o minimizada mientras navega o graba una ruta, pero cesa por completo si la app se cierra.</li>
+      <li><strong>Grabación de rutas GPX:</strong> Las rutas grabadas por el usuario se guardan localmente en el almacenamiento privado del dispositivo y pueden ser exportadas o eliminadas cuando el usuario lo desee.</li>
     </ul>
 
-    <h3>c. Contenido generado por el usuario y comentarios (UGC)</h3>
-    <p>Los comentarios publicados en los picos son públicos y quedan vinculados a su nombre de usuario. Al participar en la comunidad de Peakest, el usuario se compromete a cumplir las siguientes normas obligatorias:</p>
+    <h3>c. Mapas offline y recursos descargados</h3>
+    <p>La aplicación permite descargar paquetes de mapas offline para su uso en zonas sin cobertura de red. Dichos archivos de mapa se descargan y almacenan directamente en la memoria local de su dispositivo móvil.</p>
+
+    <h3>d. Contenido generado por el usuario, reseñas y moderación (UGC)</h3>
+    <p>Las reseñas y comentarios publicados en los picos son públicos y quedan vinculados a su nombre de usuario. Al participar en la comunidad de Peakest, el usuario se compromete a cumplir las siguientes normas obligatorias:</p>
     <ul>
-      <li><strong>Tolerancia cero con contenido inapropiado:</strong> Queda terminantemente prohibido publicar mensajes ofensivos, difamatorios, acoso, lenguaje que incite al odio, spam, enlaces externos sospechosos o información deliberadamente falsa sobre el estado o peligrosidad de las rutas.</li>
-      <li><strong>Mecanismos de reporte y bloqueo:</strong> La aplicación dispone de un botón integrado en cada comentario para <strong>reportar</strong> contenido ilícito o engañoso y una opción para <strong>bloquear</strong> a otros usuarios, impidiendo la visualización de sus publicaciones en el dispositivo.</li>
-      <li><strong>Procedimiento de moderación y expulsión:</strong> Los comentarios reportados son revisados en un plazo máximo de <strong>24 horas</strong>. Nos reservamos el derecho de eliminar cualquier comentario infractor y de suspender o cancelar de forma inmediata y definitiva la cuenta de cualquier usuario reincidente o infractor sin previo aviso.</li>
+      <li><strong>Tolerancia cero con contenido inapropiado:</strong> Queda terminantemente prohibido publicar mensajes ofensivos, difamatorios, acoso, spam, lenguaje de odio o información engañosa sobre los itinerarios.</li>
+      <li><strong>Herramientas de reporte y bloqueo:</strong> Cada comentario dispone de un botón para <strong>reportar</strong> contenido ilícito o abusivo y una opción para <strong>bloquear</strong> a otros usuarios, impidiendo la visualización de sus publicaciones en su teléfono.</li>
+      <li><strong>Procedimiento de moderación y expulsión:</strong> El contenido reportado se revisa en un plazo máximo de <strong>24 horas</strong>. Nos reservamos el derecho de eliminar cualquier comentario que infrinja las normas y de suspender o borrar de forma definitiva la cuenta de cualquier usuario reincidente sin previo aviso.</li>
     </ul>
 
-    <h2>3. Advertencia de Seguridad, Disponibilidad Técnica y Exención de Responsabilidad</h2>
+    <h2>3. Suscripciones In-App y Compras (Peakest Pro)</h2>
+    <p>Peakest ofrece funcionalidades gratuitas y opciones de suscripción de pago denominadas <strong>Peakest Pro</strong> para desbloquear ventajas adicionales (como la descarga ilimitada de mapas offline de distintos países):</p>
+    <ul>
+      <li><strong>Procesamiento de pagos:</strong> Las suscripciones y compras dentro de la aplicación son procesadas de manera segura a través de la plataforma oficial de pagos de <strong>Google Play Billing</strong> e integradas mediante <strong>RevenueCat</strong>. En ningún momento Uranium Forest recopila ni almacena sus datos bancarios o tarjetas de crédito.</li>
+      <li><strong>Renovación automática y cancelación:</strong> La suscripción se renueva de forma automática salvo que el usuario la cancele al menos 24 horas antes del vencimiento del periodo actual. Puede gestionar o cancelar sus suscripciones en cualquier momento desde los ajustes de su cuenta en la tienda **Google Play Store**.</li>
+      <li><strong>Restauración de compras:</strong> Puede restaurar sus compras o suscripciones activas en cualquier momento desde la sección de ajustes de la aplicación mediante el botón *"Restaurar compras"*.</li>
+    </ul>
+
+    <h2>4. Advertencia de Seguridad, Disponibilidad Técnica y Exención de Responsabilidad</h2>
     <div class="alert-box">
-      <p><strong>Uso recreativo y riesgo en montaña:</strong> Peakest, sus mapas y su sistema de puntuaciones tienen un fin estrictamente lúdico y orientativo. El montañismo, senderismo y la ascensión a cumbres conllevan riesgos inherentes de desorientación, caídas, lesiones graves o muerte. Es responsabilidad exclusiva del usuario evaluar las condiciones meteorológicas, el terreno, su condición física y portar el equipo adecuado.</p>
-      <p><strong>Exención sobre comentarios y valoraciones:</strong> Las opiniones, estimaciones de dificultad o reseñas dejadas por otros usuarios en los picos representan exclusivamente el criterio subjetivo de quien las emite y <strong>no constituyen guías técnicas ni avales oficiales de seguridad</strong>. Uranium Forest declina cualquier responsabilidad civil o penal por extravíos, accidentes o daños directos o indirectos derivados de la confianza depositada en los comentarios de la comunidad o en la información de la app.</p>
-      <p><strong>Disponibilidad técnica, caídas y ausencia de garantía ("AS IS"):</strong> La aplicación y sus servicios asociados se suministran «tal cual» y «según disponibilidad», sin garantías de ningún tipo, expresas o implícitas. Uranium Forest no garantiza que la aplicación esté libre de errores, bugs o interrupciones, ni que los servidores, bases de datos o servicios en la nube permanezcan accesibles de manera ininterrumpida. El servicio podrá ser suspendido temporalmente por labores de mantenimiento, actualizaciones o incidencias técnicas imprevistas ajenas a nuestro control. En ningún caso nos hacemos responsables por la falta de sincronización puntual de cumbres, fallos de conectividad en montaña, pérdida fortuita de datos de sesión o anomalías derivadas del funcionamiento de la app.</p>
-      <p><strong>Anti-trampas:</strong> Nos reservamos el derecho de invalidar registros de cumbres, anular puntuaciones del ranking o suspender cuentas cuando se detecte uso de herramientas de falsificación GPS (GPS spoofing), emuladores o manipulaciones fraudulentas.</p>
+      <p><strong>Uso recreativo y riesgo en montaña:</strong> Peakest, sus mapas y su sistema de puntos tienen un propósito exclusivamente deportivo, orientativo y recreativo. El montañismo y las actividades al aire libre conllevan riesgos inherentes de caídas, desorientación, inclemencias meteorológicas repentinas o lesiones. Es responsabilidad exclusiva del usuario evaluar las condiciones del terreno, la meteorología y su estado físico.</p>
+      <p><strong>Exención sobre comentarios y valoraciones:</strong> Las reseñas, dificultades indicadas o comentarios dejados por la comunidad reflejan la opinión subjetiva de cada usuario y <strong>no constituyen guías técnicas ni avales oficiales de seguridad</strong>. Uranium Forest declina cualquier responsabilidad civil o penal por extravíos, accidentes o daños derivados del uso de la app o de los comentarios de la comunidad.</p>
+      <p><strong>Disponibilidad técnica ("AS IS"):</strong> La aplicación y sus servicios en la nube se proporcionan «tal cual» y «según disponibilidad». No se garantiza que el servicio esté libre de interrupciones, errores de sincronización puntuales o caídas de servidor. En ningún caso nos hacemos responsables por la falta de sincronización fortuita de cumbres o la pérdida temporal de datos.</p>
+      <p><strong>Anti-trampas:</strong> Nos reservamos el derecho de anular cumbres, restablecer puntuaciones o suspender cuentas si se detecta uso de herramientas de falsificación de GPS (GPS spoofing), emuladores o manipulaciones de datos.</p>
     </div>
 
-    <h2>4. Enlaces y Recursos de Terceros</h2>
-    <p>Para enriquecer la experiencia del usuario, la aplicación puede enlazar o consultar recursos y servicios externos gratuitos:</p>
+    <h2>5. Enlaces y Recursos de Terceros</h2>
+    <p>La aplicación puede incluir enlaces o consultar servicios externos para complementar la información:</p>
     <ul>
-      <li><strong>Previsiones meteorológicas y guías de rutas:</strong> Enlaces o integraciones hacia proveedores externos que ofrecen información climática o itinerarios.</li>
-      <li><strong>Consultas externas de IA / Información:</strong> Funcionalidades que consultan descripciones de picos mediante proveedores de inteligencia artificial externos. En estas consultas solo se envían datos propios del pico, nunca datos personales del usuario.</li>
+      <li><strong>Meteorología y guías externas:</strong> Accesos directos a proveedores de previsión climática o itinerarios de montaña.</li>
+      <li><strong>Consultas de información e Inteligencia Artificial:</strong> Funciones para consultar datos descriptivos de picos. En estas consultas solo se envían datos públicos del pico, nunca información personal del usuario.</li>
     </ul>
-    <p><strong>Descargo de responsabilidad de terceros:</strong> Al tratarse de plataformas independientes y ajenas a Uranium Forest, no tenemos control sobre su disponibilidad, cambios en sus políticas, cierres o precisión. El acceso a dichos recursos se realiza bajo la propia responsabilidad del usuario.</p>
+    <p>Al tratarse de plataformas ajenas, Uranium Forest no asume responsabilidad sobre la disponibilidad o precisión de dichos sitios externos.</p>
 
-    <h2>5. Proveedores de Infraestructura</h2>
-    <p>No vendemos sus datos personales ni los compartimos con fines publicitarios. Recurrimos únicamente a proveedores esenciales para el soporte técnico y la infraestructura:</p>
+    <h2>6. Proveedores de Infraestructura y Servicios</h2>
+    <p>Sus datos personales no se venden a terceros ni se utilizan con fines publicitarios. Recurrimos únicamente a proveedores esenciales de infraestructura:</p>
     <ul>
-      <li><strong>Amazon Web Services (AWS):</strong> Alojamiento de bases de datos, APIs serverless (AWS Lambda) y recepción de alertas de moderación mediante Amazon SNS/SES, bajo centros de datos que cumplen con las normativas europeas de protección de datos.</li>
-      <li><strong>Google Identity Services:</strong> Para la verificación de identidad del usuario en el inicio de sesión.</li>
-    </ul>
-
-    <h2>6. Conservación de Datos y Eliminación de Cuenta</h2>
-    <p>Sus datos de cuenta, puntuación y comentarios se conservarán mientras mantenga activo su perfil. De conformidad con las políticas de Google Play y el RGPD, garantizamos el derecho a la supresión de sus datos:</p>
-    <ul>
-      <li><strong>Solicitud de borrado:</strong> Para solicitar la eliminación definitiva de su cuenta y de todos sus datos personales asociados, envíe un correo a <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a> con el asunto <em>"Eliminar cuenta de Peakest"</em> desde la misma cuenta de Google con la que se registró en Peakest.</li>
-      <li><strong>Plazo y efectos:</strong> La cuenta, el correo, el identificador de Google y el registro de cumbres serán suprimidos permanentemente de nuestra base de datos activa. Sus comentarios podrán ser eliminados o disociados de forma irreversible para que no contengan ningún dato identificable.</li>
-      <li><strong>Revocación de permisos:</strong> Puede revocar el permiso de acceso a la ubicación en cualquier momento desde los ajustes de privacidad del sistema operativo de su dispositivo.</li>
+      <li><strong>Amazon Web Services (AWS):</strong> Alojamiento de la base de datos (DynamoDB), ejecución segura de funciones (AWS Lambda), gestión de identidad (AWS Cognito) y alertas de moderación (Amazon SNS), en servidores que cumplen con las normativas europeas de protección de datos (RGPD).</li>
+      <li><strong>Google Identity Services & Google Play:</strong> Para la autenticación de usuarios y la gestión de compras in-app.</li>
+      <li><strong>RevenueCat:</strong> Para la verificación y gestión del estado de las suscripciones y compras.</li>
+      <li><strong>MapLibre / OpenFreeMap:</strong> Para la renderización de mapas vectoriales y descarga de teselas cartográficas.</li>
     </ul>
 
-    <h2>7. Modificación, Suspensión y Cese del Servicio</h2>
-    <p>Peakest es un servicio ofrecido de forma gratuita. Uranium Forest se reserva el derecho expreso de, en cualquier momento y sin incurrir en responsabilidad alguna frente al usuario o terceros:</p>
+    <h2>7. Conservación de Datos y Eliminación de Cuenta</h2>
+    <p>Sus datos se conservarán mientras mantenga su cuenta activa. De conformidad con las normativas de Google Play y el RGPD, garantizamos el derecho a la supresión de sus datos:</p>
     <ul>
-      <li><strong>Modificar o retirar funcionalidades:</strong> Alterar, restringir o suprimir de forma temporal o permanente determinadas funciones de la aplicación, especialmente aquellas que dependan de la disponibilidad de recursos, enlaces o webs de terceros (como previsiones meteorológicas, guías de rutas o consultas de IA).</li>
-      <li><strong>Cese definitivo de la plataforma:</strong> Discontinuar, apagar o retirar la aplicación y sus servicios en la nube en caso de inviabilidad técnica, operativa o de costes, sin que ello genere derecho a compensación o indemnización alguna por la pérdida de datos, historiales de cumbres, comentarios o puntuaciones acumuladas.</li>
+      <li><strong>Eliminación directa desde la Aplicación:</strong> Puede eliminar su cuenta y borrar de manera inmediata todos sus datos personales en cualquier momento ingresando a la pantalla de **Ajustes** dentro de la app y pulsando en **"Eliminar cuenta"**. Esto borrará de forma irreversible su usuario, perfil, historial de cumbres y registros del servidor.</li>
+      <li><strong>Solicitud por correo electrónico:</strong> Alternativamente, puede enviar un correo a <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a> con el asunto *"Eliminar cuenta de Peakest"* desde la dirección de correo con la que se registró en la app.</li>
     </ul>
 
-    <h2>8. Actualizaciones de este Documento</h2>
-    <p>Podremos revisar y actualizar este texto para adaptarlo a nuevas versiones de la aplicación, mejoras en la seguridad o requisitos legales. Las modificaciones serán efectivas desde el momento de su publicación en esta misma página web.</p>
+    <h2>8. Modificación, Suspensión y Cese del Servicio</h2>
+    <p>Uranium Forest se reserva el derecho de modificar, actualizar o retirar de forma temporal o permanente determinadas funciones de la aplicación, o de suspender la plataforma por razones técnicas, operativas o de viabilidad, sin que ello genere derecho a compensación por historiales o puntuaciones acumuladas.</p>
+
+    <h2>9. Actualizaciones de este Documento</h2>
+    <p>Nos reservamos el derecho de revisar y actualizar este texto legal para adaptarlo a futuras actualizaciones de la app o exigencias normativas. Los cambios entrarán en vigor desde su publicación en esta página web.</p>
 
     <footer>
       &copy; 2026 Uranium Forest. Todos los derechos reservados. Peakest.
