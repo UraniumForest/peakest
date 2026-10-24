@@ -306,7 +306,7 @@
 
         <h2>8. Cartographic Attribution and Governing Law</h2>
         <ul>
-          <li><strong>Cartographic Attribution:</strong> Map and peak data are powered by © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (available under the Open Database License - ODbL), OpenFreeMap, and OpenMapTiles.</li>
+          <li><strong>Cartographic Attribution:</strong> Map and peak data are powered by © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (available under the Open Database License - ODbL), with regional extracts sourced via Geofabrik.de, OpenFreeMap, and OpenMapTiles.</li>
           <li><strong>Governing Law and Jurisdiction:</strong> These Terms of Service are governed by the laws of Spain and applicable European Union regulations. Any dispute shall be submitted to the competent courts in accordance with applicable consumer protection laws.</li>
         </ul>
       </section>
@@ -342,7 +342,7 @@
         </ul>
 
         <h3>c. Offline maps</h3>
-        <p>Offline map packages are downloaded and stored directly in your mobile device's local memory to allow network-free navigation.</p>
+        <p>Offline map packages are hosted on our cloud storage infrastructure (Cloudflare R2) and are downloaded and stored directly in your mobile device's local memory to allow network-free navigation.</p>
 
         <h3>d. Custom Background Images and Imported GPX Files</h3>
         <p>When you select an image from your gallery to customize an achievement card or import a GPX file, <strong>the file is processed exclusively locally within your device's temporary cache/storage</strong>. Your personal photos and GPX files are never uploaded to or stored on Uranium Forest's servers.</p>
@@ -350,10 +350,11 @@
         <h2>3. Infrastructure Providers and Recipients</h2>
         <p>Your personal data is not sold to third parties or used for unrelated commercial purposes. We solely use essential providers to deliver the service:</p>
         <ul>
-          <li><strong>Amazon Web Services (AWS):</strong> Database (DynamoDB), secure functions (AWS Lambda), and authentication management (AWS Cognito), hosted on servers within the European Union (Stockholm, Sweden – <code>eu-north-1</code>) under GDPR security standards.</li>
+          <li><strong>Amazon Web Services (AWS):</strong> Database (DynamoDB), serverless functions (AWS Lambda), authentication management (AWS Cognito), and automated moderation/system notifications (AWS SNS), hosted on servers within the European Union (Stockholm, Sweden – <code>eu-north-1</code>) under GDPR security standards.</li>
+          <li><strong>Cloudflare (Cloudflare R2):</strong> Cloud object storage used to host and distribute the offline map packages available for download in the application (generated from OpenStreetMap data extracted via Geofabrik.de).</li>
           <li><strong>Google Identity Services & Google Play:</strong> Account authentication and billing.</li>
           <li><strong>RevenueCat:</strong> Management and synchronization of subscription and purchase states.</li>
-          <li><strong>MapLibre / OpenFreeMap:</strong> Vector map rendering and cartographic tile downloads.</li>
+          <li><strong>OpenFreeMap & MapLibre:</strong> Vector map rendering engine (MapLibre) and online base map tiles (OpenFreeMap) when browsing in online mode.</li>
         </ul>
 
         <h2>4. Data Retention and Account Deletion</h2>
@@ -366,7 +367,7 @@
         <h2>5. Legal Basis, International Transfers, Minors, and GDPR Rights</h2>
         <ul>
           <li><strong>Legal Basis (Art. 6 GDPR):</strong> The processing of your account data and conquered peaks is based on the <strong>performance of a contract</strong> (providing the app's core features upon accepting the Terms). Moderation reports and anti-cheat checks are based on <strong>legitimate interest</strong> and legal compliance (Digital Services Act).</li>
-          <li><strong>International Transfers:</strong> While our primary database resides in the European Union, third-party providers located in the United States (such as Google and RevenueCat) process data under the EU-U.S. Data Privacy Framework and Standard Contractual Clauses (SCCs).</li>
+          <li><strong>International Transfers:</strong> While our primary database resides in the European Union, third-party providers located in the United States (such as Google, Cloudflare, and RevenueCat) process data under the EU-U.S. Data Privacy Framework and Standard Contractual Clauses (SCCs).</li>
           <li><strong>Minimum Age:</strong> Peakest is not directed at children under the age of 14 (or the applicable minimum digital consent age in your country). We do not knowingly collect personal data from minors.</li>
           <li><strong>Your GDPR Rights:</strong> You have the right to access, rectify, erase, restrict, object to processing, and request the portability of your personal data by emailing <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a>. You also have the right to lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>) or your local supervisory authority.</li>
         </ul>
@@ -438,7 +439,7 @@
 
         <h2>8. Atribución Cartográfica y Legislación Aplicable</h2>
         <ul>
-          <li><strong>Atribución Cartográfica:</strong> Los datos cartográficos y de cumbres provienen de los colaboradores de © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> (bajo licencia ODbL), OpenFreeMap y OpenMapTiles.</li>
+          <li><strong>Atribución Cartográfica:</strong> Los datos cartográficos y de cumbres provienen de los colaboradores de © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> (bajo licencia ODbL), con extractos regionales obtenidos a través de Geofabrik.de, OpenFreeMap y OpenMapTiles.</li>
           <li><strong>Legislación Aplicable y Jurisdicción:</strong> Los presentes Términos se rigen por la legislación española y la normativa aplicable de la Unión Europea. Cualquier controversia se someterá a los juzgados y tribunales competentes conforme a la normativa vigente de consumidores y usuarios.</li>
         </ul>
       </section>
@@ -474,7 +475,7 @@
         </ul>
 
         <h3>c. Mapas offline</h3>
-        <p>Los paquetes de mapas offline se descargan y almacenan directamente en la memoria local de su dispositivo móvil para permitir la navegación sin conexión de red.</p>
+        <p>Los paquetes de mapas offline se alojan en nuestra infraestructura de almacenamiento en la nube (Cloudflare R2) y se descargan y almacenan directamente en la memoria local de su dispositivo móvil para permitir la navegación sin conexión de red.</p>
 
         <h3>d. Imágenes de fondo personalizadas y archivos GPX</h3>
         <p>Cuando selecciona una fotografía de su galería para personalizar una tarjeta de logro o importa un archivo GPX, <strong>dicho archivo se procesa de forma estrictamente local en la memoria temporal de su dispositivo</strong>. Sus fotografías personales y archivos GPX nunca se suben ni se almacenan en los servidores de Uranium Forest.</p>
@@ -482,10 +483,11 @@
         <h2>3. Proveedores de Infraestructura y Destinatarios</h2>
         <p>Sus datos personales no se venden a terceros ni se utilizan con fines comerciales ajenos. Recurrimos únicamente a proveedores esenciales para prestar el servicio:</p>
         <ul>
-          <li><strong>Amazon Web Services (AWS):</strong> Base de datos (DynamoDB), funciones seguras (AWS Lambda) y gestión de autenticación (AWS Cognito), alojados en servidores dentro de la Unión Europea (Estocolmo, Suecia – región <code>eu-north-1</code>) con estándares de seguridad RGPD.</li>
+          <li><strong>Amazon Web Services (AWS):</strong> Base de datos (DynamoDB), funciones seguras (AWS Lambda), gestión de autenticación (AWS Cognito) y servicio de notificaciones/alertas de moderación (AWS SNS), alojados en servidores dentro de la Unión Europea (Estocolmo, Suecia – región <code>eu-north-1</code>) con estándares de seguridad RGPD.</li>
+          <li><strong>Cloudflare (Cloudflare R2):</strong> Almacenamiento de objetos en la nube utilizado para alojar y distribuir los paquetes de mapas offline disponibles para su descarga en la aplicación (generados a partir de datos de OpenStreetMap extraídos mediante Geofabrik.de).</li>
           <li><strong>Google Identity Services & Google Play:</strong> Autenticación de cuentas y facturación.</li>
           <li><strong>RevenueCat:</strong> Gestión y sincronización del estado de suscripciones y compras.</li>
-          <li><strong>MapLibre / OpenFreeMap:</strong> Renderización de mapas vectoriales y descarga de teselas cartográficas.</li>
+          <li><strong>OpenFreeMap & MapLibre:</strong> Motor de renderizado de mapas vectoriales en el dispositivo (MapLibre) y carga del mapa base cuando se navega en modo online (OpenFreeMap).</li>
         </ul>
 
         <h2>4. Conservación de Datos y Eliminación de Cuenta</h2>
@@ -498,7 +500,7 @@
         <h2>5. Base Jurídica, Transferencias Internacionales, Menores y Derechos RGPD</h2>
         <ul>
           <li><strong>Base jurídica del tratamiento (Art. 6 RGPD):</strong> El tratamiento de los datos de su cuenta e historial de cimas se basa en la <strong>ejecución de un contrato</strong> (prestar el servicio solicitado al aceptar los Términos de Servicio). La gestión de reportes de moderación y prevención de trampas se basa en el <strong>interés legítimo</strong> y el cumplimiento de obligaciones legales (Ley de Servicios Digitales - DSA).</li>
-          <li><strong>Transferencias internacionales:</strong> Mientras que nuestra base de datos principal reside en la Unión Europea, los proveedores tecnológicos ubicados en EE. UU. (como Google y RevenueCat) tratan los datos al amparo del Marco de Privacidad de Datos UE-EE. UU. (<em>EU-U.S. Data Privacy Framework</em>) y las Cláusulas Contractuales Tipo.</li>
+          <li><strong>Transferencias internacionales:</strong> Mientras que nuestra base de datos principal reside en la Unión Europea, los proveedores tecnológicos ubicados en EE. UU. (como Google, Cloudflare y RevenueCat) tratan los datos al amparo del Marco de Privacidad de Datos UE-EE. UU. (<em>EU-U.S. Data Privacy Framework</em>) y las Cláusulas Contractuales Tipo.</li>
           <li><strong>Edad mínima:</strong> Peakest no está dirigida a menores de 14 años (o la edad mínima de consentimiento digital aplicable en su país). No recopilamos intencionadamente datos personales de menores.</li>
           <li><strong>Ejercicio de derechos RGPD:</strong> Puede ejercer en cualquier momento sus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a <a href="mailto:uraniumforest@gmail.com">uraniumforest@gmail.com</a>. Asimismo, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>) u otra autoridad de control competente.</li>
         </ul>
