@@ -240,12 +240,12 @@
     
     <!-- Selector de Idioma -->
     <div class="lang-switcher">
-      <a href="#en" class="lang-btn active" id="btn-en" onclick="setLang('en')">🇬🇧 EN</a>
-      <a href="#es" class="lang-btn" id="btn-es" onclick="setLang('es')">🇪🇸 ES</a>
+      <a href="javascript:void(0)" class="lang-btn" id="btn-en" onclick="changeLang('en')">🇬🇧 EN</a>
+      <a href="javascript:void(0)" class="lang-btn" id="btn-es" onclick="changeLang('es')">🇪🇸 ES</a>
     </div>
 
     <!-- ========================================== -->
-    <!-- CONTENIDO EN INGLÉS (POR DEFECTO) -->
+    <!-- CONTENIDO EN INGLÉS -->
     <!-- ========================================== -->
     <div id="content-en">
       <header class="header">
@@ -254,8 +254,8 @@
         <p class="date">Last updated: October 24, 2026</p>
 
         <nav class="nav-tabs">
-          <a class="nav-btn" href="#terms-en">Go to: Terms of Service ➔</a>
-          <a class="nav-btn" href="#privacy-en">Go to: Privacy Policy ➔</a>
+          <a class="nav-btn" href="#terms">Go to: Terms of Service ➔</a>
+          <a class="nav-btn" href="#privacy">Go to: Privacy Policy ➔</a>
         </nav>
       </header>
 
@@ -387,8 +387,8 @@
         <p class="date">Última actualización: 24 de octubre de 2026</p>
 
         <nav class="nav-tabs">
-          <a class="nav-btn" href="#terms-es">Ir a: Términos de Servicio ➔</a>
-          <a class="nav-btn" href="#privacy-es">Ir a: Política de Privacidad ➔</a>
+          <a class="nav-btn" href="#terms">Ir a: Términos de Servicio ➔</a>
+          <a class="nav-btn" href="#privacy">Ir a: Política de Privacidad ➔</a>
         </nav>
       </header>
 
@@ -516,8 +516,20 @@
   </main>
 
   <script>
-    // Lógica para cambiar de idioma
+    let currentLang = 'en';
+
+    function detectUserLang() {
+      const userLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+      for (const lang of userLangs) {
+        if (lang && lang.toLowerCase().startsWith('es')) {
+          return 'es';
+        }
+      }
+      return 'en';
+    }
+
     function setLang(lang) {
+      currentLang = lang;
       if (lang === 'es') {
         document.getElementById('content-en').style.display = 'none';
         document.getElementById('content-es').style.display = 'block';
@@ -535,26 +547,46 @@
       }
     }
 
-    // Al cargar la página, comprobar si existe un hashtag (#es o #terms-es)
-    // El inglés es el idioma por defecto
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash;
-      if (hash.includes('es') || hash === '#es') {
-        setLang('es');
-      } else {
-        setLang('en');
+    function changeLang(lang) {
+      setLang(lang);
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('privacy') || hash.includes('terms')) {
+        handleNavigation();
       }
-    });
+    }
 
-    // Detectar también si el usuario cambia el hashtag manualmente en la barra del navegador
-    window.addEventListener('hashchange', () => {
-       const hash = window.location.hash;
-       if (hash.includes('es') || hash === '#es') {
-         setLang('es');
-       } else if (hash.includes('en') || hash === '#en') {
-         setLang('en');
-       }
-    });
+    function handleNavigation() {
+      const rawHash = window.location.hash.toLowerCase();
+      let targetSection = null;
+
+      // Determinación de idioma forzado por hash o por navegador
+      if (rawHash === '#es' || rawHash.endsWith('-es')) {
+        setLang('es');
+      } else if (rawHash === '#en' || rawHash.endsWith('-en')) {
+        setLang('en');
+      } else {
+        setLang(detectUserLang());
+      }
+
+      // Soporte para #privacy / #privacy-xx y #terms / #terms-xx
+      if (rawHash.includes('privacy')) {
+        targetSection = currentLang === 'es' ? 'privacy-es' : 'privacy-en';
+      } else if (rawHash.includes('terms')) {
+        targetSection = currentLang === 'es' ? 'terms-es' : 'terms-en';
+      }
+
+      if (targetSection) {
+        setTimeout(() => {
+          const el = document.getElementById(targetSection);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 50);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', handleNavigation);
+    window.addEventListener('hashchange', handleNavigation);
   </script>
 </body>
 </html>
