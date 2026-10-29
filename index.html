@@ -549,21 +549,24 @@
 
     function changeLang(lang) {
       setLang(lang);
-      handleNavigation(false);
+
+      if (window.location.hash) {
+        history.replaceState(null, document.title, window.location.pathname + window.location.search);
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function handleNavigation(checkLanguage = true) {
+    function handleNavigation() {
       const rawHash = window.location.hash.toLowerCase();
       let targetSection = null;
 
-      if (checkLanguage) {
-        if (rawHash === '#es' || rawHash.endsWith('-es')) {
-          setLang('es');
-        } else if (rawHash === '#en' || rawHash.endsWith('-en')) {
-          setLang('en');
-        } else {
-          setLang(detectUserLang());
-        }
+      if (rawHash === '#es' || rawHash.endsWith('-es')) {
+        setLang('es');
+      } else if (rawHash === '#en' || rawHash.endsWith('-en')) {
+        setLang('en');
+      } else {
+        setLang(detectUserLang());
       }
 
       if (rawHash.includes('privacy')) {
@@ -582,8 +585,8 @@
       }
     }
 
-    window.addEventListener('DOMContentLoaded', () => handleNavigation(true));
-    window.addEventListener('hashchange', () => handleNavigation(true));
+    window.addEventListener('DOMContentLoaded', handleNavigation);
+    window.addEventListener('hashchange', handleNavigation);
   </script>
 </body>
 </html>
