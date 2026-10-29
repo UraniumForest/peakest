@@ -254,8 +254,8 @@
         <p class="date">Last updated: October 24, 2026</p>
 
         <nav class="nav-tabs">
-          <a class="nav-btn" href="#terms">Go to: Terms of Service ➔</a>
-          <a class="nav-btn" href="#privacy">Go to: Privacy Policy ➔</a>
+          <a class="nav-btn" href="#terms-en">Go to: Terms of Service ➔</a>
+          <a class="nav-btn" href="#privacy-en">Go to: Privacy Policy ➔</a>
         </nav>
       </header>
 
@@ -387,8 +387,8 @@
         <p class="date">Última actualización: 24 de octubre de 2026</p>
 
         <nav class="nav-tabs">
-          <a class="nav-btn" href="#terms">Ir a: Términos de Servicio ➔</a>
-          <a class="nav-btn" href="#privacy">Ir a: Política de Privacidad ➔</a>
+          <a class="nav-btn" href="#terms-es">Ir a: Términos de Servicio ➔</a>
+          <a class="nav-btn" href="#privacy-es">Ir a: Política de Privacidad ➔</a>
         </nav>
       </header>
 
@@ -517,6 +517,7 @@
 
   <script>
     let currentLang = 'en';
+    let userHasManuallySelectedLang = false;
 
     function detectUserLang() {
       const userLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
@@ -548,6 +549,7 @@
     }
 
     function changeLang(lang) {
+      userHasManuallySelectedLang = true;
       setLang(lang);
 
       if (window.location.hash) {
@@ -561,14 +563,18 @@
       const rawHash = window.location.hash.toLowerCase();
       let targetSection = null;
 
-      if (rawHash === '#es' || rawHash.endsWith('-es')) {
-        setLang('es');
-      } else if (rawHash === '#en' || rawHash.endsWith('-en')) {
-        setLang('en');
-      } else {
-        setLang(detectUserLang());
+      // Si el usuario no ha elegido manualmente, detectamos por hash o por navegador
+      if (!userHasManuallySelectedLang) {
+        if (rawHash === '#es' || rawHash.endsWith('-es')) {
+          setLang('es');
+        } else if (rawHash === '#en' || rawHash.endsWith('-en')) {
+          setLang('en');
+        } else {
+          setLang(detectUserLang());
+        }
       }
 
+      // Desplazamiento siempre en base al idioma seleccionado (currentLang)
       if (rawHash.includes('privacy')) {
         targetSection = currentLang === 'es' ? 'privacy-es' : 'privacy-en';
       } else if (rawHash.includes('terms')) {
