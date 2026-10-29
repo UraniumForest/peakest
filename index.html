@@ -1,3 +1,6 @@
+Aquí tienes el documento HTML completo con el script corregido:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -549,26 +552,23 @@
 
     function changeLang(lang) {
       setLang(lang);
-      const hash = window.location.hash.toLowerCase();
-      if (hash.includes('privacy') || hash.includes('terms')) {
-        handleNavigation();
-      }
+      handleNavigation(false);
     }
 
-    function handleNavigation() {
+    function handleNavigation(checkLanguage = true) {
       const rawHash = window.location.hash.toLowerCase();
       let targetSection = null;
 
-      // Determinación de idioma forzado por hash o por navegador
-      if (rawHash === '#es' || rawHash.endsWith('-es')) {
-        setLang('es');
-      } else if (rawHash === '#en' || rawHash.endsWith('-en')) {
-        setLang('en');
-      } else {
-        setLang(detectUserLang());
+      if (checkLanguage) {
+        if (rawHash === '#es' || rawHash.endsWith('-es')) {
+          setLang('es');
+        } else if (rawHash === '#en' || rawHash.endsWith('-en')) {
+          setLang('en');
+        } else {
+          setLang(detectUserLang());
+        }
       }
 
-      // Soporte para #privacy / #privacy-xx y #terms / #terms-xx
       if (rawHash.includes('privacy')) {
         targetSection = currentLang === 'es' ? 'privacy-es' : 'privacy-en';
       } else if (rawHash.includes('terms')) {
@@ -585,8 +585,10 @@
       }
     }
 
-    window.addEventListener('DOMContentLoaded', handleNavigation);
-    window.addEventListener('hashchange', handleNavigation);
+    window.addEventListener('DOMContentLoaded', () => handleNavigation(true));
+    window.addEventListener('hashchange', () => handleNavigation(true));
   </script>
 </body>
 </html>
+
+```
