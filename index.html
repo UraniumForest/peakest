@@ -38,7 +38,10 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 2rem;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -163,9 +166,15 @@
     h2 {
       font-size: 1.25rem;
       font-weight: 700;
-      margin-top: 2rem;
+      margin-top: 2.25rem;
       margin-bottom: 0.75rem;
       color: var(--text-main);
+      scroll-margin-top: 2rem;
+    }
+
+    .account-deletion-block {
+      scroll-margin-top: 2rem;
+      padding-top: 0.75rem;
     }
 
     h3 {
@@ -374,8 +383,7 @@
           <li><strong>OpenFreeMap & MapLibre:</strong> Vector map rendering engine (MapLibre) and online base map tiles (OpenFreeMap) when browsing in online mode.</li>
         </ul>
 
-        <!-- Envoltorio con el ID para que al navegar se muestre también el título 4 -->
-        <div id="delete-account-en">
+        <div id="delete-account-en" class="account-deletion-block">
           <h2>4. Data Retention and Account Deletion</h2>
           <div class="info-box" style="border-left: 4px solid var(--primary); background: var(--bg-color);">
             <h3 style="margin-top: 0; color: var(--primary);">Account and Personal Data Deletion Request (Google Play Policy)</h3>
@@ -527,8 +535,7 @@
           <li><strong>OpenFreeMap & MapLibre:</strong> Motor de renderizado de mapas vectoriales en el dispositivo (MapLibre) y carga del mapa base cuando se navega en modo online (OpenFreeMap).</li>
         </ul>
 
-        <!-- Envoltorio con el ID para que al navegar se muestre también el título 4 -->
-        <div id="delete-account-es">
+        <div id="delete-account-es" class="account-deletion-block">
           <h2>4. Conservación de Datos y Eliminación de Cuenta</h2>
           <div class="info-box" style="border-left: 4px solid var(--primary); background: var(--bg-color);">
             <h3 style="margin-top: 0; color: var(--primary);">Solicitud de Eliminación de Cuenta y Datos Personales (Directriz de Google Play)</h3>
