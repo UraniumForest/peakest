@@ -293,6 +293,7 @@
         <div class="alert-box">
           <p><strong>Mountain risk and orientation purpose:</strong> Peakest, its maps, and its points system are for purely sporting, orientation, and recreational purposes. Mountaineering and outdoor activities carry inherent risks of falls, getting lost, sudden weather changes, or injuries. It is the sole responsibility of the user to assess terrain conditions, weather, and their physical state.</p>
           <p><strong>Disclaimer regarding comments and ratings:</strong> Reviews, listed difficulties, or comments left by the community reflect the subjective opinion of each user and <strong>do not constitute technical guides or official safety endorsements</strong>. Uranium Forest declines any civil or criminal liability for lost individuals, accidents, or damages derived from the use of the app or community comments.</p>
+          <p><strong>Geographic accuracy disclaimer:</strong> Peak coordinates, names, prominent classifications, and official altitudes are compiled from open geographic databases (such as OpenStreetMap) and are provided solely for gamification and recreational purposes. Uranium Forest does not warrant geodetic or topographic accuracy, and peak logs should never replace certified topographic surveying or official park authorities' notices.</p>
         </div>
 
         <h2>2. Technical Availability ("AS IS") and Anti-cheat Measures</h2>
@@ -306,6 +307,7 @@
           <li><strong>Auto-renewal and cancellation:</strong> Subscriptions automatically renew unless the user cancels them at least 24 hours before the end of the current period. You can manage or cancel your subscriptions at any time from your account settings in the <strong>Google Play Store</strong>.</li>
           <li><strong>Freemium limits and subscription expiry:</strong> The free version of Peakest includes usage limits (such as a maximum of 1 active offline map region and up to 3 free custom background uses for achievement cards). If a <strong>Peakest Pro</strong> subscription expires or is cancelled, additional downloaded offline maps will remain locked until the subscription is renewed or only 1 active map is kept.</li>
           <li><strong>Restore purchases:</strong> You can restore your active purchases or subscriptions at any time from the app's paywall or settings section using the <em>"Restore purchases"</em> button.</li>
+          <li><strong>Refund policy:</strong> Refunds are subject to and processed exclusively through Google Play's standard refund policies. Uranium Forest does not manage or process direct financial refunds. Any dispute or request for a refund must be handled through the Google Play support center.</li>
         </ul>
 
         <h2>4. User-Generated Content (UGC), License, and Community Guidelines</h2>
@@ -400,7 +402,7 @@
 
             <h4 style="margin: 1rem 0 0.5rem 0; font-size: 0.95rem; font-weight: 700;">Data Deletion vs. Retention Breakdown:</h4>
             <ul>
-              <li><strong>Data Permanently Deleted:</strong> Your Google ID, email address, public username, custom profile settings, peak conquest history, points, accumulated scores, and leaderboard placements are immediately and irrevocably erased from AWS Cognito and DynamoDB.</li>
+              <li><strong>Data Permanently Deleted:</strong> Your Google ID, email address, public username, total accumulated altitude, your history of conquered peaks (including timestamps), <strong>and all your published reviews and difficulty ratings</strong> are immediately and irrevocably erased from AWS Cognito and DynamoDB.</li>
               <li><strong>Locally Stored Data:</strong> Offline maps, recorded GPX tracks, and cached background images reside solely on your device storage; uninstalling the app or clearing its app data will erase this information completely.</li>
               <li><strong>Data Kept &amp; Retention Period:</strong> We do not keep any backup copy of your personal identity once deleted. Anonymized transactional receipts (associated with Google Play purchases and managed by RevenueCat) are retained for a maximum of <strong>5 years</strong> exclusively to satisfy mandatory Spanish tax and accounting obligations (Ley General Tributaria). These financial records cannot be used to recreate or access your account.</li>
             </ul>
@@ -445,6 +447,7 @@
         <div class="alert-box">
           <p><strong>Riesgo en montaña y carácter orientativo:</strong> Peakest, sus mapas y su sistema de puntos tienen un propósito exclusivamente deportivo, orientativo y recreativo. El montañismo y las actividades al aire libre conllevan riesgos inherentes de caídas, desorientación, inclemencias meteorológicas repentinas o lesiones. Es responsabilidad exclusiva del usuario evaluar las condiciones del terreno, la meteorología y su estado físico.</p>
           <p><strong>Exención sobre comentarios y valoraciones:</strong> Las reseñas, dificultades indicadas o comentarios dejados por la comunidad reflejan la opinión subjetiva de cada usuario y <strong>no constituyen guías técnicas ni avales oficiales de seguridad</strong>. Uranium Forest declina cualquier responsabilidad civil o penal por extravíos, accidentes o daños derivados del uso de la app o de los comentarios de la comunidad.</p>
+          <p><strong>Exención de precisión geográfica:</strong> Las coordenadas de las cumbres, nombres, clasificaciones de prominencia y altitudes oficiales se recopilan de bases de datos geográficas abiertas (como OpenStreetMap) y se proporcionan únicamente con fines de gamificación y recreativos. Uranium Forest no garantiza la precisión geodésica o topográfica, y los registros de cimas nunca deben sustituir a los levantamientos topográficos certificados ni a los avisos de las autoridades oficiales de los parques.</p>
         </div>
 
         <h2>2. Disponibilidad Técnica ("AS IS") y Medidas Anti-trampas</h2>
@@ -458,6 +461,7 @@
           <li><strong>Renovación automática y cancelación:</strong> La suscripción se renueva de forma automática salvo que el usuario la cancele al menos 24 horas antes del vencimiento del periodo actual. Puede gestionar o cancelar sus suscripciones en cualquier momento desde los ajustes de su cuenta en la tienda <strong>Google Play Store</strong>.</li>
           <li><strong>Límites Freemium y vencimiento de suscripción:</strong> La versión gratuita de Peakest incluye límites de uso (como un máximo de 1 mapa offline activo y hasta 3 usos gratuitos de fondos personalizados en tarjetas de logro). Si su suscripción a <strong>Peakest Pro</strong> finaliza o se cancela, los mapas offline adicionales descargados permanecerán bloqueados hasta renovar la suscripción o mantener únicamente 1 mapa activo.</li>
           <li><strong>Restauración de compras:</strong> Puede restaurar sus compras o suscripciones activas en cualquier momento desde la pantalla de suscripción o la sección de ajustes mediante el botón <em>"Restaurar compras"</em>.</li>
+          <li><strong>Política de reembolsos:</strong> Los reembolsos están sujetos y se procesan exclusivamente a través de las políticas de reembolso estándar de Google Play. Uranium Forest no gestiona ni procesa reembolsos financieros directos. Cualquier disputa o solicitud de reembolso debe tramitarse a través del centro de soporte de Google Play.</li>
         </ul>
 
         <h2>4. Contenido Generado por el Usuario (UGC), Licencia y Normas de la Comunidad</h2>
@@ -552,7 +556,7 @@
 
             <h4 style="margin: 1rem 0 0.5rem 0; font-size: 0.95rem; font-weight: 700;">Desglose de Datos Eliminados vs. Conservados:</h4>
             <ul>
-              <li><strong>Datos que se eliminan definitivamente:</strong> Se destruyen sin posibilidad de recuperación tu identificador de Google (Google ID), correo electrónico, nombre de usuario público, configuración, historial de cimas conquistadas, puntuaciones y clasificaciones en AWS Cognito y DynamoDB.</li>
+              <li><strong>Datos que se eliminan definitivamente:</strong> Se destruyen sin posibilidad de recuperación tu identificador de Google (Google ID), correo electrónico, nombre de usuario público, el total de tu altura acumulada, el historial y las fechas de tus cimas conquistadas, <strong>y todas las reseñas y valoraciones de dificultad que hayas publicado</strong> en AWS Cognito y DynamoDB.</li>
               <li><strong>Datos locales del dispositivo:</strong> Los mapas offline, las rutas GPX grabadas y las fotos de fondo están en el almacenamiento propio de tu teléfono; al desinstalar la app o borrar sus datos locales se suprimen al instante.</li>
               <li><strong>Datos conservados y periodo de retención legal:</strong> No guardamos copias de tus datos personales una vez borrados. Únicamente se conservan los recibos de transacciones económicas anonimizadas (asociados a suscripciones facturadas por Google Play y gestionadas por RevenueCat) durante un periodo máximo de <strong>5 años</strong> por imperativo legal según la Ley General Tributaria española. Dichos registros contables no permiten restablecer ni vincular la cuenta eliminada.</li>
             </ul>
